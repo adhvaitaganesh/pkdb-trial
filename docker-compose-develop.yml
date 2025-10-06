@@ -8,8 +8,6 @@
 # update
 #     ./docker-update.sh
 # -----------------------------------------------------------------------------
-version: '3'
-
 volumes:
   django_static:
     driver: local

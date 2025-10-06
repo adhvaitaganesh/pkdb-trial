@@ -49,17 +49,17 @@ docker volume rm -f pkdb_vue_dist
 docker system prune --force
 
 # build and start containers
-docker-compose -f $PKDB_DOCKER_COMPOSE_YAML build --no-cache
+docker compose -f $PKDB_DOCKER_COMPOSE_YAML build --no-cache
 
 echo "***Make migrations & collect static ***"
-docker-compose -f $PKDB_DOCKER_COMPOSE_YAML run --rm backend bash -c "/usr/local/bin/python manage.py makemigrations && /usr/local/bin/python manage.py migrate && /usr/local/bin/python manage.py collectstatic --noinput "
+docker compose -f $PKDB_DOCKER_COMPOSE_YAML run --rm backend bash -c "/usr/local/bin/python manage.py makemigrations && /usr/local/bin/python manage.py migrate && /usr/local/bin/python manage.py collectstatic --noinput "
 
 echo "*** Setup admin user ***"
-docker-compose -f $PKDB_DOCKER_COMPOSE_YAML run --rm backend bash -c "/usr/local/bin/python manage.py createsuperuser2 --username admin --password ${PKDB_ADMIN_PASSWORD} --email konigmatt@googlemail.com --noinput"
+docker compose -f $PKDB_DOCKER_COMPOSE_YAML run --rm backend bash -c "/usr/local/bin/python manage.py createsuperuser2 --username admin --password ${PKDB_ADMIN_PASSWORD} --email konigmatt@googlemail.com --noinput"
 
 echo "*** Build elasticsearch index ***"
-docker-compose -f $PKDB_DOCKER_COMPOSE_YAML run --rm backend ./manage.py search_index --rebuild -f
+docker compose -f $PKDB_DOCKER_COMPOSE_YAML run --rm backend ./manage.py search_index --rebuild -f
 
 echo "*** Running containers ***"
-docker-compose -f $PKDB_DOCKER_COMPOSE_YAML up --detach
+docker compose -f $PKDB_DOCKER_COMPOSE_YAML up --detach
 docker container ls
