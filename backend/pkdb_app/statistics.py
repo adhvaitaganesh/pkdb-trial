@@ -1,6 +1,5 @@
-"""
-Basic information and statistics about data base content.
-"""
+"""Basic information and statistics about database content."""
+
 from django.db.models import Count, F, Q
 from pkdb_app.data.models import SubSet, Data
 from pkdb_app.info_nodes.models import  Substance
@@ -8,42 +7,13 @@ from rest_framework import serializers
 from rest_framework import viewsets
 from rest_framework.response import Response
 
-from pkdb_app._version import __version__
+from pkdb_app import __version__
 from pkdb_app.interventions.models import Intervention
 from pkdb_app.outputs.models import Output
 from pkdb_app.studies.models import Study, Reference
 from pkdb_app.subjects.models import Group, Individual
 
 
-'''
-Substance statistics: /statistics/substances/
-{
-    version: 0.9.2,
-    substances: {
-        caffeine: {
-            studies: {
-                count: 20, 
-            },
-            interventions: {
-                count: 20,
-            },
-            outputs: {
-                count: 20
-            },
-            timecourses: {
-                count: 40
-            },
-            scatters: {
-                count: 30
-            }
-        },
-        ...
-    }
-
-}
-
-
-'''
 class SubstanceStatisticsViewSet(viewsets.ViewSet):
     def list(self,request):
         substances_interventions = Substance.objects.annotate(label=F('info_node__label'),intervention_count=Count("intervention", filter=Q(intervention__normed=True))).order_by('info_node__label')

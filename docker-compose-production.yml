@@ -9,8 +9,8 @@
 #     ./docker-update.sh
 
 # To update the frontend individually use:
-#     docker-compose -f $PKDB_DOCKER_COMPOSE_YAML up -d --no-deps --build frontend
-#     docker-compose -f $PKDB_DOCKER_COMPOSE_YAML up -d --no-deps --build backend
+#     docker compose -f $PKDB_DOCKER_COMPOSE_YAML up -d --no-deps --build frontend
+#     docker compose -f $PKDB_DOCKER_COMPOSE_YAML up -d --no-deps --build backend
 # -----------------------------------------------------------------------------
 volumes:
   django_static:
@@ -29,7 +29,7 @@ volumes:
 services:
   postgres:
     restart: always
-    image: postgres:13.0
+    image: postgres:18.0
     ports:
       - "5433:5432"
     volumes:

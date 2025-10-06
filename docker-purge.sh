@@ -21,7 +21,7 @@ rm -rf static
 
 
 # shut down all containers (remove images and volumes)
-docker-compose -f $PKDB_DOCKER_COMPOSE_YAML down --volumes --rmi local
+docker compose -f $PKDB_DOCKER_COMPOSE_YAML down --volumes --rmi local
 
 # make sure containers are removed (if not running)
 docker container rm -f pkdb_frontend_1

@@ -3,7 +3,7 @@ See: # https://django-allauth.readthedocs.io/en/latest/providers.html#github
 
 # manage.py set_auth_provider google google GOOGLE_CLIENT_ID GOOGLE_SECRET_ID
 python manage.py set_auth_provider github github $GITHUB_CLIENT_ID $GITHUB_SECRET_ID
-docker-compose run web python manage.py set_auth_provider github $GITHUB_CLIENT_ID $GITHUB_SECRET_ID
+docker compose run web python manage.py set_auth_provider github $GITHUB_CLIENT_ID $GITHUB_SECRET_ID
 
 """
 from allauth.socialaccount.models import SocialApp
