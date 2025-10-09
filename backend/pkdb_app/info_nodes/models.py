@@ -172,15 +172,35 @@ class MeasurementType(AbstractInfoNode):
      ]
     CAN_NEGATIVE = [
         "tmax",  # tmax can be negative due to time offsets, i.e. pre-simulation with subsequent fall after intervention
-        "concentration change",    # this often happens in placebo simulations
+
+        # concentrations
+        "concentration change",
         "concentration change absolute",
-        "EHR change",
+        "cumulative amount (change)",
+
+        # blood pressure
         "blood pressure systolic (change)",
         "blood pressure systolic (change relative)"
         "blood pressure systolic auc_end (change)",
         "blood pressure diastolic (change)",
         "blood pressure diastolic (change relative)",
         "blood pressure diastolic auc_end (change)",
+        "MAP (change absolute)",
+        "renin activity (change absolute)",
+
+        # heart rate
+        "heart rate (change)",
+        "EHR change",
+
+        # physiology
+        "weight (change)",
+        "hba1c (change)",
+
+        # coagulation
+        "inr (change)",
+        "prothrombin time(change)",
+        "aPTT (change)",
+
     ]
     ADDITIVE = []  # todo remove
 
