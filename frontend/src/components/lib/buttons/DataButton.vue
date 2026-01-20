@@ -3,10 +3,10 @@
          text
          width="100%"
          to="/data"
-         title="Browse PK-DB data"
+         title="Browse data catalog"
   >
     <v-icon left color="#1E90FF">{{ faIcon('data') }}</v-icon>
-    data
+    Browse catalog
   </v-btn>
 </template>
 

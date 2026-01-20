@@ -2,7 +2,7 @@
   <v-btn color="black"
          text
          width="100%"
-         title="Show PK-DB data for example study"
+         title="Show example dataset"
          to="/data/PKDB00057/"
   >
     <v-icon left color="#1E90FF">{{ faIcon('data') }}</v-icon>
@@ -19,7 +19,7 @@ export default {
   props: {
     text: {
       type:String,
-      default:"Example study"
+      default:"Example dataset"
     },
   }
 
