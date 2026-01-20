@@ -13,6 +13,10 @@
         <v-icon left color="#1E90FF">{{ faIcon('data') }}</v-icon>
         Data
       </v-btn>
+      <v-btn text to="/trial" title="Trial">
+        <v-icon left color="#1E90FF">{{ faIcon('data') }}</v-icon>
+        Trial
+      </v-btn>
     </v-toolbar-items>
 
 

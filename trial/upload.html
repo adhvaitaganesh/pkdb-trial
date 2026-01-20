@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trial Uploads</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <div class="logo">Trial</div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="upload.html" class="active">Uploads</a>
+          <a href="access.html">Access Control</a>
+          <button class="primary">Create submission</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Dataset ingestion</p>
+          <h1>Upload, validate, and package lab datasets.</h1>
+          <p class="lead">
+            Centralize assays, protocols, and raw files into a single submission pipeline with automated checks and
+            provenance metadata.
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="card-header">Active submission</div>
+          <ul>
+            <li>
+              <strong>PK Liver Panel v3</strong>
+              <span>Owner: A. Singh · 64 files</span>
+            </li>
+            <li>
+              <strong>Validation status</strong>
+              <span>3 warnings · 1 required fix</span>
+            </li>
+          </ul>
+          <div class="card-footer">Last updated 15 minutes ago</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Upload workspace</h2>
+          <p>Drag and drop files or connect an instrument export to start a submission.</p>
+        </div>
+        <div class="grid two">
+          <article class="tile">
+            <h3>Drop files</h3>
+            <p>Supports CSV, XLSX, FASTQ, and assay exports. Max 25 GB per upload.</p>
+            <div class="upload-drop">
+              <div>
+                <strong>Drop files here</strong>
+                <span>or browse from your device</span>
+              </div>
+              <button class="secondary">Browse files</button>
+            </div>
+          </article>
+          <article class="tile">
+            <h3>Submission checklist</h3>
+            <ul class="checklist">
+              <li>
+                <span class="badge badge-success">Done</span>
+                Study metadata captured
+              </li>
+              <li>
+                <span class="badge badge-warning">Needs review</span>
+                Instrument calibration report
+              </li>
+              <li>
+                <span class="badge badge-neutral">Pending</span>
+                Protocol attachments
+              </li>
+              <li>
+                <span class="badge badge-neutral">Pending</span>
+                Data steward approval
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section muted">
+        <div class="section-heading">
+          <h2>Validation & enrichment</h2>
+          <p>Resolve automated checks and add structured metadata before publishing.</p>
+        </div>
+        <div class="grid three">
+          <article class="tile">
+            <h3>Schema validation</h3>
+            <p>Run column mapping, unit normalization, and controlled vocabulary checks.</p>
+          </article>
+          <article class="tile">
+            <h3>Sample mapping</h3>
+            <p>Link specimen IDs, cohorts, and treatment arms to each assay file.</p>
+          </article>
+          <article class="tile">
+            <h3>Quality gates</h3>
+            <p>Configure pass/fail thresholds and required documentation per study type.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Trial</strong>
+        <p>Secure data publishing for pharma scientists and AI teams.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
