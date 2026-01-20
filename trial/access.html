@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trial Access Control</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <div class="logo">Trial</div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="upload.html">Uploads</a>
+          <a href="access.html" class="active">Access Control</a>
+          <button class="primary">Invite collaborator</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Governance</p>
+          <h1>Define access tiers and data-use agreements.</h1>
+          <p class="lead">
+            Control who can view, download, and publish datasets with role-based permissions, embargo windows, and
+            approval workflows.
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="card-header">Access overview</div>
+          <ul>
+            <li>
+              <strong>24 active collaborators</strong>
+              <span>Across 6 partner organizations</span>
+            </li>
+            <li>
+              <strong>5 pending requests</strong>
+              <span>Awaiting governance review</span>
+            </li>
+          </ul>
+          <div class="card-footer">Policy updates synced today</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Permission tiers</h2>
+          <p>Assign each dataset a visibility tier that maps to roles, export formats, and agreements.</p>
+        </div>
+        <div class="grid three">
+          <article class="tile">
+            <h3>Internal research</h3>
+            <p>Full dataset access for lab teams and modeling groups with internal SOP compliance.</p>
+            <ul class="meta-list">
+              <li>Download raw files</li>
+              <li>Export analysis-ready tables</li>
+              <li>Attach internal notes</li>
+            </ul>
+          </article>
+          <article class="tile">
+            <h3>External partner</h3>
+            <p>Restricted views with watermarking, curated subsets, and required acknowledgements.</p>
+            <ul class="meta-list">
+              <li>Read-only access</li>
+              <li>Data-use agreement required</li>
+              <li>24-hour audit log</li>
+            </ul>
+          </article>
+          <article class="tile">
+            <h3>Public release</h3>
+            <p>Publish vetted datasets with citations and open access metadata.</p>
+            <ul class="meta-list">
+              <li>Landing page + DOI</li>
+              <li>Dataset versioning</li>
+              <li>Community visibility</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section muted">
+        <div class="section-heading">
+          <h2>Approval workflow</h2>
+          <p>Route requests and approvals through governance checkpoints.</p>
+        </div>
+        <div class="grid two">
+          <article class="tile">
+            <h3>Request queue</h3>
+            <div class="request">
+              <div>
+                <strong>Genomic Safety Signals</strong>
+                <span>Requested by Horizon Bio · 2 days ago</span>
+              </div>
+              <button class="secondary">Review request</button>
+            </div>
+            <div class="request">
+              <div>
+                <strong>PK Liver Panel v3</strong>
+                <span>Requested by MedCore Labs · 4 days ago</span>
+              </div>
+              <button class="secondary">Review request</button>
+            </div>
+          </article>
+          <article class="tile">
+            <h3>Usage agreements</h3>
+            <p>Attach agreements and expiration dates to every share, and capture signatures.</p>
+            <div class="agreement">
+              <div>
+                <strong>Standard pharma NDA</strong>
+                <span>Expires Dec 2025 · 18 active datasets</span>
+              </div>
+              <button class="ghost">View template</button>
+            </div>
+            <div class="agreement">
+              <div>
+                <strong>AI research license</strong>
+                <span>Expires May 2026 · 9 active datasets</span>
+              </div>
+              <button class="ghost">View template</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Trial</strong>
+        <p>Secure data publishing for pharma scientists and AI teams.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
