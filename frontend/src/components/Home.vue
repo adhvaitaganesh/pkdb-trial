@@ -4,78 +4,96 @@
       <v-row align="start"
              justify="center">
         <v-col xs="11" sm="11" md="10" lg="8">
-
-            <h1>PK-DB - pharmacokinetics database</h1>
-
+          <section>
+            <h1>Pharma Data Exchange</h1>
             <p align="justify">
-              An open issue in the field of pharmacokinetics is the reproducible and reusable storage of data from
-              experimental and clinical studies, which is especially important for computational modeling. We present PK-DB
-              an open database for pharmacokinetics information from clinical trials as well as pre-clinical research.
-              The focus of PK-DB is to provide high-quality
-              pharmacokinetics data enriched with the required meta-information for computational modeling and data integration.
+              A shared workspace where pharma scientists upload and curate laboratory datasets, while AI researchers
+              discover approved data through powerful filters and clear provenance.
             </p>
-
-          <v-sheet class="ma-5"
-                   width="80%"
-                   align="justify"
-          >
-              <a href="https://doi.org/10.1093/nar/gkaa990"  target="_blank">
-                <v-badge
-                    color="green"
-                    content="new"
-                >
-                  <v-icon color="black">
-                    fas fa-file-alt
-                  </v-icon>
-                </v-badge>
-              </a>
-              <span class="ma-6">
-              <b>PK-DB: pharmacokinetics database for individualized and stratified computational modeling</b><br/>
-              <i>Grzegorzewski J, Brandhorst J, Green K, Eleftheriadou D, Duport Y, Bartsch F, Köller A, Ke DYJ, De Angelis S, König M.</i><br />
-      Nucleic Acids Res. 2021 Jan 8;49(D1):D1358-D1364. doi: <a href="https://doi.org/10.1093/nar/gkaa990">10.1093/nar/gkaa990</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/33151297/">33151297</a>
-              </span>
+            <v-sheet class="mt-4 pa-4" outlined>
+              <v-row>
+                <v-col cols="12" md="4">
+                  <strong>Upload & organize</strong>
+                  <p class="mb-0">Capture studies, cohorts, and assay context in a single place.</p>
+                </v-col>
+                <v-col cols="12" md="4">
+                  <strong>Control access</strong>
+                  <p class="mb-0">Define who can view, request, or download each dataset.</p>
+                </v-col>
+                <v-col cols="12" md="4">
+                  <strong>Publish to AI teams</strong>
+                  <p class="mb-0">Share curated releases with data-ready metadata.</p>
+                </v-col>
+              </v-row>
             </v-sheet>
+          </section>
 
-            <h2>Data</h2>
+          <section class="mt-6">
+            <h2>Built for two audiences</h2>
+            <v-row>
+              <v-col cols="12" md="6">
+                <v-card outlined class="pa-4">
+                  <h3>Pharma scientists & lab teams</h3>
+                  <ul>
+                    <li>Upload raw files, structured tables, and protocols.</li>
+                    <li>Group datasets by study, cohort, and experiment.</li>
+                    <li>Publish approved releases with access rules.</li>
+                  </ul>
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="6">
+                <v-card outlined class="pa-4">
+                  <h3>AI researchers & data partners</h3>
+                  <ul>
+                    <li>Search by assay, compound, cohort, or output.</li>
+                    <li>Review dataset cards with provenance details.</li>
+                    <li>Request access or download approved datasets.</li>
+                  </ul>
+                </v-card>
+              </v-col>
+            </v-row>
+          </section>
 
+          <section class="mt-6">
+            <h2>From upload to publication</h2>
+            <v-row>
+              <v-col cols="12" md="4">
+                <v-card outlined class="pa-4">
+                  <h3>1. Ingest</h3>
+                  <p>Drop files, validate metadata, and capture experiment context.</p>
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="4">
+                <v-card outlined class="pa-4">
+                  <h3>2. Curate</h3>
+                  <p>Standardize fields, add ontologies, and link assays to cohorts.</p>
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="4">
+                <v-card outlined class="pa-4">
+                  <h3>3. Share</h3>
+                  <p>Publish controlled releases and track who can access each dataset.</p>
+                </v-card>
+              </v-col>
+            </v-row>
+          </section>
+
+          <section class="mt-6">
+            <h2>Browse the catalog</h2>
             <p align="justify">
-
-              Any pharmacokinetics study contains subjects under investigation. These subjects are characterised by properties
-              like their sex, age, body weight, health status, and further accessible pharmacokinetics influencing characteristica.
-              In PK-DB this data is saved as groups and individuals.
-              Next, some kind of interventions are performed on the subjects, which is mostly a dosing of a substance to the body
-              of the subject.
-
-              Finally, pharmacokinetics measurements are performed on the subject.
-              These are often some kind of concentration profiles in some tissue of the subject.
-              Additionally, derived pharmacokinetics parameters e.g. AUC, clearance, or half-lives are commonly reported.
-              Correlations between theses outputs are often shown in form of scatter plots.
+              Explore the live dataset inventory to see the range of studies, cohorts, and outputs already available.
             </p>
             <data-button/>
-
             <p>
               <count-table/>
             </p>
+          </section>
 
+          <section class="mt-6">
             <curation-example />
+          </section>
 
-            <!--
-            <h2>Features</h2>
-            <p>
-            <ul>
-              <li>Experimental errors and variation</li>
-              <li>Normalisation of units</li>
-              <li>Automatic calculation of PKs from timecourses</li>
-              <li>Annotations to biological Ontologies</li>
-              <li>REST API</li>
-              <li>Simple curation workflow</li>
-              <li>Strong validation rules during curation</li>
-            </ul>
-            </p>
-            -->
-
-            <about />
-
+          <about />
         </v-col>
       </v-row>
     </v-container>

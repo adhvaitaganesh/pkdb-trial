@@ -1,9 +1,9 @@
 <template>
   <div>
-  <h2>Example study</h2>
+  <h2>Sample dataset preview</h2>
 
     <p align="justify">
-      The following example shows what information is extracted from a typical study
+      Preview how a curated dataset captures assay context, cohort metadata, and key outputs.
     </p>
 
     <p>
@@ -11,7 +11,7 @@
     </p>
 
     <p>
-      <single-study-button/>
+      <single-study-button text="View sample dataset"/>
 
   </p>
   </div>
