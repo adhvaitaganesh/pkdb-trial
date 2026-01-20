@@ -10,6 +10,9 @@ import Registration from './components/auth/Registration';
 import Verification from './components/auth/Verification';
 import RequestPasswordReset from './components/auth/RequestPasswordReset';
 import PasswordReset from './components/auth/PasswordReset';
+import TrialHome from './components/trial/TrialHome';
+import TrialUpload from './components/trial/TrialUpload';
+import TrialAccess from './components/trial/TrialAccess';
 
 
 Vue.use(Router);
@@ -37,6 +40,21 @@ export default new Router({
             path: '/curation',
             name: 'Curation',
             component: Curation
+        },
+        {
+            path: '/trial',
+            name: 'TrialHome',
+            component: TrialHome
+        },
+        {
+            path: '/trial/upload',
+            name: 'TrialUpload',
+            component: TrialUpload
+        },
+        {
+            path: '/trial/access',
+            name: 'TrialAccess',
+            component: TrialAccess
         },
         {
             path: '/account',
