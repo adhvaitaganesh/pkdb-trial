@@ -5,4 +5,5 @@ based on the inspiration layout from the existing PK-DB frontend, adapted for th
 
 ## Preview
 
-Open `trial/index.html` in a browser to view the homepage prototype.
+Open `trial/index.html` in a browser to view the homepage prototype. Additional UI flows are available at
+`trial/upload.html` and `trial/access.html`.
